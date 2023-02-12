@@ -26,4 +26,30 @@ favorite_book('Wonderland')
 def  make_shirt(size,text):
     print('this is my size: ' , size,' and the text to be printed is',text)
 
-make_shirt(14,'EELTANIM')
+make_shirt('Medium','EELTANIM')
+make_shirt(size='Medium',text='EELTANIM')
+
+# 8-4. Large Shirts: Modify the make_shirt() function so that shirts are large
+# by default with a message that reads I love Python. Make a large shirt and a
+# medium shirt with the default message, and a shirt of any size with a different message.
+def  make_shirt(text, size='large',):
+      print('this is my size: ' , size,' ',text)
+make_shirt('I love python')
+
+def  make_shirt(size,text='I love python'):
+      print('this is my size: ' , size,' ',text)
+make_shirt('Medium')
+make_shirt('small','I am happy for learning function')
+
+# 8-5. Cities: Write a function called describe_city() that accepts the name of
+# a city and its country. The function should print a simple sentence, such as
+# Reykjavik is in Iceland. Give the parameter for the country a default value.
+# Call your function for three different cities, at least one of which is not in the
+# default country.
+
+def describe_city(city, country='Nigeria'):
+    print(city, ' is in ', country)
+
+describe_city('kano')
+describe_city('Sule Tankarkar')
+describe_city(city='Zandar',country='Niger')
