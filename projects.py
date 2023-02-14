@@ -53,3 +53,33 @@ def describe_city(city, country='Nigeria'):
 describe_city('kano')
 describe_city('Sule Tankarkar')
 describe_city(city='Zandar',country='Niger')
+
+# 8-6. City Names: Write a function called city_country() that takes in the name
+# of a city and its country. The function should return a string formatted like this:
+# "Santiago, Chile"
+
+def city_country(country, city):
+	countrycity=country, city
+	return countrycity
+print(city_country('santiago', 'chile'))
+print(city_country('Nigeria', ' Kano'))
+print(city_country('Niger', 'zandar'))
+
+# 8-7. Album: Write a function called make_album() that builds a dictionary
+# describing a music album. The function should take in an artist name and an
+# album title, and it should return a dictionary containing these two pieces of
+# information. Use the function to make three dictionaries representing different
+# albums. Print each return value to show that the dictionaries are storing the
+# album information correctly.
+# Use None to add an optional parameter to make_album() that allows you to
+# store the number of songs on an album. If the calling line includes a value for
+# the number of songs, add that value to the album’s dictionary. Make at least
+# one new function call that includes the number of songs on an album
+
+
+def make_album(artist_name, album_title):
+	album_detail={'artist': artist_name, 'album':album_title}
+	return album_detail
+print(make_album('Nura M Inuwa', 'Soyayya Ruwan Zuma'))
+print(make_album('Haruna Oji', 'Balaraba'))
+print(make_album('Style Plus', 'Four years no waka'))
