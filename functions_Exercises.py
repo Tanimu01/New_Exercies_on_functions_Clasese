@@ -78,8 +78,73 @@ print(city_country('Niger', 'zandar'))
 
 
 def make_album(artist_name, album_title):
-	album_detail={'artist': artist_name, 'album':album_title}
-	return album_detail
+  album_detail={'artist': artist_name, 'album':album_title}
+  
+  return album_detail
 print(make_album('Nura M Inuwa', 'Soyayya Ruwan Zuma'))
 print(make_album('Haruna Oji', 'Balaraba'))
 print(make_album('Style Plus', 'Four years no waka'))
+print(make_album('Style Plus', 'Four years no waka'))
+
+def make_album(artist_name, album_title, no_songs=None):
+  album_detail={'artist': artist_name, 'album':album_title}
+  if no_songs:
+    album_detail[no_songs] = no_songs 
+
+  return album_detail
+print(make_album('Nura M Inuwa', 'Soyayya Ruwan Zuma'))
+print(make_album('Haruna Oji', 'Balaraba',4))
+print(make_album('Style Plus', 'Four years no waka',3))
+print(make_album('Style Plus', 'Four years no waka',5))
+
+
+#8-8. User Albums: Start with your program from Exercise 8-7. Write a while
+#loop that allows users to enter an album’s artist and title. Once you have that
+#information, call make_album() with the user’s input and print the dictionary
+# that’s created. Be sure to include a quit value in the while loop.
+
+
+def make_album(artist_name, album_title):
+  album_detail={'artist': artist_name, 'album':album_title}
+  
+  return album_detail
+
+while True:
+    print('enter q to quit anytime')
+    artname=input('enter artist name')
+    if artname=='q':
+        break
+    print('enter q to quit anytime')
+    albtle=input('enter album title')
+    if albtle=='q':
+        break
+    print(make_album(artname,albtle))
+
+# 8-9. Messages: Make a list containing a series of short text messages. Pass the
+# list to a function called show_messages(), which prints each text message.
+
+def show_messages(family_name):
+    for family in family_name:
+        print('You are welcome my family memebr  :', family)
+family_list=['Tanimu','Amina', 'Saadatu','Aisha','Shamsu', 'Sadiq']
+show_messages(family_list)
+
+# 8-10. Sending Messages: Start with a copy of your program from Exercise 8-9.
+# Write a function called send_messages() that prints each text message and
+# moves each message to a new list called sent_messages as it’s printed. After
+# calling the function, print both of your lists to make sure the messages were moved correctly.
+
+def show_messages(family_name):
+    for family in family_name:
+        print('You are welcome my family memebr  :', family)
+def send_messages(family_name, new_list):
+  while family_name:
+    current_list=family_name.pop()
+    print('the current list is ', current_list)
+    new_list.append(current_list)
+
+family_list=['Tanimu','Amina', 'Saadatu','Aisha','Shamsu', 'Sadiq']
+new_list=[]
+show_messages(family_list)
+send_messages(family_list,new_list)
+print(new_list)
